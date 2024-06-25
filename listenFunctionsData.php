@@ -30,8 +30,9 @@ function printSection()
     }
 }
 
-function printPlayer($title, $src)
+function printPlayer($titleName, $src)
 {
+    // Removed title from iframe as it was breaking one player from showing and completely broken in all other players
     echo '<div class="row">
 			<div class="col-3">&nbsp;</div>
 			<div class="col-6" style="position: relative;">
@@ -39,8 +40,7 @@ function printPlayer($title, $src)
 					frameborder="0"
 					width="100%"
 					height="75"
-					title="' . $title . '"
-					src="https://drive.google.com/file/d/' . $src . '">
+					src="https://drive.google.com/file/d/' . $src . '/preview?usp=share">
 				</iframe>
 				<div style="width: 53px; height: 55px; position: absolute; opacity: 0; right: 10px; top: 0px;">&nbsp;</div>
 			</div>
